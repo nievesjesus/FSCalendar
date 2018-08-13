@@ -68,7 +68,13 @@
     CGFloat titleHeight = [@"1" sizeWithAttributes:@{NSFontAttributeName:self.calendar.appearance.headerTitleFont}].height*1.5 + weekdayMargin*3;
     
     _bottomBorder.frame = CGRectMake(0, _contentView.fs_height-weekdayHeight-weekdayMargin*2, _contentView.fs_width, 1.0);
+    
+    if (self.calendar.appearance.headerTitleLeft == true) {
+    _titleLabel.frame = CGRectMake(10, _bottomBorder.fs_bottom-titleHeight-weekdayMargin, titleWidth-20,titleHeight);
+    } else {
     _titleLabel.frame = CGRectMake(0, _bottomBorder.fs_bottom-titleHeight-weekdayMargin, titleWidth,titleHeight);
+    }
+
     
 }
 
@@ -89,6 +95,12 @@
 {
     _bottomBorder.backgroundColor = self.calendar.appearance.headerBottonBorderColor;
     _titleLabel.font = self.calendar.appearance.headerTitleFont;
+    if (self.calendar.appearance.headerTitleLeft == true) {
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
+    } else {
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    
     _titleLabel.textColor = self.calendar.appearance.headerTitleColor;
     [self.weekdayView configureAppearance];
 }

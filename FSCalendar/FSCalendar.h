@@ -565,6 +565,7 @@ IB_DESIGNABLE
 @property (strong, nonatomic) IBInspectable UIColor  *weekdayTextColor;
 
 @property (strong, nonatomic) IBInspectable UIColor  *headerTitleColor;
+@property (assign, nonatomic) IBInspectable BOOL      headerTitleLeft;
 @property (strong, nonatomic) IBInspectable UIColor  *headerBottonBorderColor;
 @property (strong, nonatomic) IBInspectable NSString *headerDateFormat;
 @property (assign, nonatomic) IBInspectable CGFloat  headerMinimumDissolvedAlpha;

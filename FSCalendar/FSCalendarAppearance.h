@@ -103,6 +103,9 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
  */
 @property (strong, nonatomic) UIColor  *headerTitleColor;
 
+
+@property (assign, nonatomic) BOOL      headerTitleLeft;
+
 /**
  * The header bottom border color.
  */
