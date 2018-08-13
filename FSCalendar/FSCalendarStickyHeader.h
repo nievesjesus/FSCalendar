@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) UILabel *titleLabel;
 
+@property (weak  , nonatomic) UIView  *bottomBorder;
+
 @property (strong, nonatomic) NSDate *month;
 
 - (void)configureAppearance;

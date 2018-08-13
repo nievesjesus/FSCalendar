@@ -104,6 +104,11 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
 @property (strong, nonatomic) UIColor  *headerTitleColor;
 
 /**
+ * The header bottom border color.
+ */
+@property (strong, nonatomic) UIColor *headerBottonBorderColor;
+
+/**
  * The date format of the month header.
  */
 @property (strong, nonatomic) NSString *headerDateFormat;

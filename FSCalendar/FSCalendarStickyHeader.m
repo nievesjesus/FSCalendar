@@ -16,7 +16,6 @@
 @interface FSCalendarStickyHeader ()
 
 @property (weak  , nonatomic) UIView  *contentView;
-@property (weak  , nonatomic) UIView  *bottomBorder;
 @property (weak  , nonatomic) FSCalendarWeekdayView *weekdayView;
 
 @end
@@ -88,6 +87,7 @@
 
 - (void)configureAppearance
 {
+    _bottomBorder.backgroundColor = self.calendar.appearance.headerBottonBorderColor;
     _titleLabel.font = self.calendar.appearance.headerTitleFont;
     _titleLabel.textColor = self.calendar.appearance.headerTitleColor;
     [self.weekdayView configureAppearance];
